@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to profile_index_path
     else
-      redirect_to root_path
+      render 404
     end
   end
 
