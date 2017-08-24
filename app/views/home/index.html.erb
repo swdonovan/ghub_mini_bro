@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<div class="panel panel-default">
+	  	<div class="panel-heading">
+	    	<h3 class="panel-title">Welcome To GITs Mini Bro</h3>
+	 	  </div>
+    <% if current_user %>
+      Hello, <%= current_user.name %>.
+      <%= link_to "Logout", logout_path, method: :delete %>
+    <% else %>
+	  	<div class="panel-body">
+        <!-- <%= form_for :session, url: login_path  do |f|  %>
+                <fieldset>
+                  <div class="form-group">
+                    <%= f.label :email, class: "form-control" %>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <%= f.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password, class: "form-control" %>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="form-group ">
+            				<!-- <%= f.submit "Log On", id: "button", class: "btn btn-success btn-lg btn-block login-button" %> -->
+                    <%= button_to "Create Account with Github", github_login_path, class: "btn btn-primary btn-md btn-block login-button" %>
+            			</div>
+          <% end %>
+	    	</fieldset>
+                  <hr/>
+                <center><h4>OR</h4></center>
+          <%= button_to "Sign in with GitHub", github_login_path, class: "btn btn-lg btn-github btn-block" %>
+	    </div>
+      <% end %>
+	</div>
+</div>
+</div>

@@ -1,0 +1,219 @@
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>My Recent Activity</h3>
+  </div>
+
+  <div class="mq-panel-body">
+       <ul class="mq-comment">
+                  <div class="mq-comment-body clearfix">
+                      <div class="header">
+                          <strong class="primary-font"><%= @events.first['type'] %></strong> <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span><%= distance_of_time_in_words Time.now, @events.first['created_at'] %></small>
+                      </div>
+                      <p>
+                        <%= @events.first['body'] %>
+                      </p>
+                  </div>
+          </ul>
+       <ul class="mq-comment">
+                  <div class="mq-comment-body clearfix">
+                      <div class="header">
+                          <strong class="primary-font"><%= @events[1]['type'] %></strong> <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span><%= distance_of_time_in_words Time.now, @events[1]['created_at'] %></small>
+                      </div>
+                      <p>
+                          <%= @events[1]['body'] unless nil %>
+                      </p>
+                  </div>
+          </ul>
+       <ul class="mq-comment">
+                  <div class="mq-comment-body clearfix">
+                      <div class="header">
+                          <strong class="primary-font"><%= @events[2]['type'] %></strong> <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span><%= distance_of_time_in_words Time.now, @events[2]['created_at'] %></small>
+                      </div>
+                      <p>
+                          <%= @events[2]['body'] unless nil %>
+                      </p>
+                  </div>
+          </ul>
+       <ul class="mq-comment">
+                  <div class="mq-comment-body clearfix">
+                      <div class="header">
+                          <strong class="primary-font"><%= @events[3]['type'] %></strong> <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span><%= distance_of_time_in_words Time.now, @events[3]['created_at'] %></small>
+                      </div>
+                      <p>
+                          <%= @events[3]['body'] unless nil %>
+                      </p>
+                  </div>
+          </ul>
+       <ul class="mq-comment">
+                  <div class="mq-comment-body clearfix">
+                      <div class="header">
+                          <strong class="primary-font"><%= @events[4]['type'] %></strong> <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span><%= distance_of_time_in_words Time.now, @events[4]['created_at'] %></small>
+                      </div>
+                      <p>
+                          <%= @events[4]['body'] unless nil %>
+                      </p>
+                  </div>
+          </ul>
+
+  </div>
+</div>
+
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>Following</h3>
+  </div>
+
+  <div class="mq-panel-body">
+      <div class="mq-friends thumbnail">
+              <div class="mq-friend-img text-center">
+              <img src=<%= @following[0].avatar_url %> width="50" alt="User Avatar" class="img-circle" />
+          </div>
+
+          <div class="mq-friends-footer">
+              <small><%= @following[0].username %> </small>
+          </div>
+      </div>
+
+      <div class="mq-friends thumbnail">
+              <div class="mq-friend-img text-center">
+              <img src=<%= @following[1].avatar_url %> width="50" alt="User Avatar" class="img-circle" />
+          </div>
+
+          <div class="mq-friends-footer">
+              <small><%= @following[1].username %> </small>
+          </div>
+      </div>
+
+      <div class="mq-friends thumbnail">
+              <div class="mq-friend-img text-center">
+              <img src=<%= @following[2].avatar_url %> width="50" alt="User Avatar" class="img-circle" />
+          </div>
+
+          <div class="mq-friends-footer">
+              <small><%= @following[2].username %> </small>
+          </div>
+      </div>
+
+      <div class="mq-friends thumbnail">
+              <div class="mq-friend-img text-center">
+              <img src=<%= @following[3].avatar_url %> width="50" alt="User Avatar" class="img-circle" />
+          </div>
+
+          <div class="mq-friends-footer">
+              <small><%= @following[3].username %> </small>
+          </div>
+      </div>
+
+      <div class="mq-friends thumbnail">
+              <div class="mq-friend-img text-center">
+              <img src=<%= @following[4].avatar_url %> width="50" alt="User Avatar" class="img-circle" />
+          </div>
+
+          <div class="mq-friends-footer">
+              <small><%= @following[4].username %> </small>
+          </div>
+      </div>
+
+      <div class="mq-friends thumbnail">
+              <div class="mq-friend-img text-center">
+              <img src=<%= @following[5].avatar_url %> width="50" alt="User Avatar" class="img-circle" />
+          </div>
+
+          <div class="mq-friends-footer">
+              <small><%= @following[5].username %> </small>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>Organizations</h3>
+  </div>
+
+  <div class="mq-panel-body">
+    <% unless @organizations.nil? %>
+      <% @organizations.each do |org| %>
+       <ul class="mq-comment">
+        <div class="mq-comment-body clearfix">
+          <div class="header">
+            <strong class="primary-font"><%= org['name'] %></strong> <small class="pull-right text-muted">
+          </div>
+         </div>
+       </ul>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>Friends Recent Activity</h3>
+  </div>
+
+  <div class="mq-panel-body">
+    <% @all_events.each do |event| %>
+       <ul class="mq-comment">
+                  <div class="mq-comment-body clearfix">
+                      <div class="header">
+                          <strong class="primary-font"><%= event.first['type'] %></strong> <small class="pull-right text-muted">
+                              <span class="glyphicon glyphicon-time"></span><%= distance_of_time_in_words Time.now, event.first['created_at'] %></small>
+                      </div>
+                      <p>
+                        <%= event.first['body'] %>
+                      </p>
+                  </div>
+          </ul>
+        <% end %>
+  </div>
+</div>
+
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>My Repositories</h3>
+  </div>
+
+  <div class="mq-panel-body">
+    <% @repos.each do |repo| %>
+       <ul class="mq-comment">
+          <div class="mq-comment-body clearfix">
+              <div class="header">
+                  <strong class="primary-font">Name: <%= repo.repo_name %></strong>
+                  <strong class="primary-font">Owner: <%= repo.owner_name %></strong>
+                  <small class="pull-right text-muted">
+                    <span class="glyphicon glyphicon-time"></span>
+                   </small>
+              </div>
+          </div>
+        </ul>
+    <% end %>
+  </div>
+</div>
+
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>Recent Commits</h3>
+  </div>
+
+  <div class="mq-panel-body">
+    <% @commits.each do |commit| %>
+       <ul class="mq-comment">
+          <div class="mq-comment-body clearfix">
+              <div class="header">
+                  <p><strong class="primary-font">Date Created: <%= commit.created_at %></strong></p>
+                  <p><strong class="primary-font">Message: <%= commit.message %></strong></p>
+                  <small class="pull-right text-muted">
+                    <span class="glyphicon glyphicon-time"></span>
+                   </small>
+              </div>
+          </div>
+        </ul>
+    <% end %>
+  </div>
+</div>
