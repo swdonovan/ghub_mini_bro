@@ -7,6 +7,11 @@ class GitHubUser
     @data = GitHubData.new(@user.screen_name)
   end
 
+  def pull_requests
+    prs = repos.map { |repo| repo.pull_requests }
+    prs.flatten
+  end
+
   def profile
     data.profile
   end

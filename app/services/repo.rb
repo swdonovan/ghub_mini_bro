@@ -15,9 +15,7 @@ class Repo
     data.commits.map { |commit| Commits.new(commit)  }
   end
 
-  def created_at_sort_commits
-    commits.sort_by do |commit|
-      commit.created_at
-    end
+  def pull_requests
+    data.pull_requests
   end
 end

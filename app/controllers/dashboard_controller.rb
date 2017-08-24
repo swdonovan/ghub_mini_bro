@@ -7,6 +7,7 @@ class DashboardController < ApplicationController
     @all_events  = @github_user.all_events
     @repos       = @github_user.repos
     @commits     = @github_user.sorted_commits
+    @prs         = @github_user.pull_requests
   end
 
   private

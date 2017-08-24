@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/swdonovan/followers?client_id=bb879a665517703b1466&client_secret=391cc1fed3efd13069a815a16ec7818b1ba7f6fe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.github.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 24 Aug 2017 14:35:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4920'
+      X-Ratelimit-Reset:
+      - '1503587809'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"313779ad7f534e69788acad07eef88c1"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Runtime-Rack:
+      - '0.031633'
+      X-Github-Request-Id:
+      - DFDE:0DF3:1097B14:2206E0F:599EE44A
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"thedanielvogelsang","id":24497322,"avatar_url":"https://avatars3.githubusercontent.com/u/24497322?v=4","gravatar_id":"","url":"https://api.github.com/users/thedanielvogelsang","html_url":"https://github.com/thedanielvogelsang","followers_url":"https://api.github.com/users/thedanielvogelsang/followers","following_url":"https://api.github.com/users/thedanielvogelsang/following{/other_user}","gists_url":"https://api.github.com/users/thedanielvogelsang/gists{/gist_id}","starred_url":"https://api.github.com/users/thedanielvogelsang/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/thedanielvogelsang/subscriptions","organizations_url":"https://api.github.com/users/thedanielvogelsang/orgs","repos_url":"https://api.github.com/users/thedanielvogelsang/repos","events_url":"https://api.github.com/users/thedanielvogelsang/events{/privacy}","received_events_url":"https://api.github.com/users/thedanielvogelsang/received_events","type":"User","site_admin":false},{"login":"katiekeel","id":11282627,"avatar_url":"https://avatars2.githubusercontent.com/u/11282627?v=4","gravatar_id":"","url":"https://api.github.com/users/katiekeel","html_url":"https://github.com/katiekeel","followers_url":"https://api.github.com/users/katiekeel/followers","following_url":"https://api.github.com/users/katiekeel/following{/other_user}","gists_url":"https://api.github.com/users/katiekeel/gists{/gist_id}","starred_url":"https://api.github.com/users/katiekeel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/katiekeel/subscriptions","organizations_url":"https://api.github.com/users/katiekeel/orgs","repos_url":"https://api.github.com/users/katiekeel/repos","events_url":"https://api.github.com/users/katiekeel/events{/privacy}","received_events_url":"https://api.github.com/users/katiekeel/received_events","type":"User","site_admin":false},{"login":"bretfunk","id":2019012,"avatar_url":"https://avatars3.githubusercontent.com/u/2019012?v=4","gravatar_id":"","url":"https://api.github.com/users/bretfunk","html_url":"https://github.com/bretfunk","followers_url":"https://api.github.com/users/bretfunk/followers","following_url":"https://api.github.com/users/bretfunk/following{/other_user}","gists_url":"https://api.github.com/users/bretfunk/gists{/gist_id}","starred_url":"https://api.github.com/users/bretfunk/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/bretfunk/subscriptions","organizations_url":"https://api.github.com/users/bretfunk/orgs","repos_url":"https://api.github.com/users/bretfunk/repos","events_url":"https://api.github.com/users/bretfunk/events{/privacy}","received_events_url":"https://api.github.com/users/bretfunk/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 14:35:54 GMT
+recorded_with: VCR 3.0.3

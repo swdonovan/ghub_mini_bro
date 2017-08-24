@@ -132,22 +132,25 @@
     </div>
   </div>
 </div>
+
 <div class="mq-panel-wrapper">
   <div class="mq-panel-header">
-      <h3>Organizations</h3>
+      <h3>Pull Requests</h3>
   </div>
 
   <div class="mq-panel-body">
-    <% unless @organizations.nil? %>
-      <% @organizations.each do |org| %>
+    <% @prs.each do |requests| %>
        <ul class="mq-comment">
-        <div class="mq-comment-body clearfix">
-          <div class="header">
-            <strong class="primary-font"><%= org['name'] %></strong> <small class="pull-right text-muted">
+          <div class="mq-comment-body clearfix">
+              <div class="header">
+                  <p><strong class="primary-font">Pull Request User: <%= requests['user']['login'] %></strong></p>
+                  <p><strong class="primary-font">Message: <%= requests['body'] %></strong></p>
+                  <small class="pull-right text-muted">
+                    <span class="glyphicon glyphicon-time"></span>
+                   </small>
+              </div>
           </div>
-         </div>
-       </ul>
-      <% end %>
+        </ul>
     <% end %>
   </div>
 </div>
@@ -177,6 +180,7 @@
 <div class="mq-panel-wrapper">
   <div class="mq-panel-header">
       <h3>My Repositories</h3>
+      <p><a href="/"></a></p>
   </div>
 
   <div class="mq-panel-body">
@@ -214,6 +218,26 @@
               </div>
           </div>
         </ul>
+    <% end %>
+  </div>
+</div>
+
+<div class="mq-panel-wrapper">
+  <div class="mq-panel-header">
+      <h3>Organizations</h3>
+  </div>
+
+  <div class="mq-panel-body">
+    <% unless @organizations.nil? %>
+      <% @organizations.each do |org| %>
+       <ul class="mq-comment">
+        <div class="mq-comment-body clearfix">
+          <div class="header">
+            <strong class="primary-font"><%= org['name'] %></strong> <small class="pull-right text-muted">
+          </div>
+         </div>
+       </ul>
+      <% end %>
     <% end %>
   </div>
 </div>

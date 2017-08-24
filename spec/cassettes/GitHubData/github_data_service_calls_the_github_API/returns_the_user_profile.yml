@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/swdonovan?client_id=bb879a665517703b1466&client_secret=391cc1fed3efd13069a815a16ec7818b1ba7f6fe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.github.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 24 Aug 2017 14:35:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4921'
+      X-Ratelimit-Reset:
+      - '1503587809'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"3e5b483d3eb12f90807cc3f58f417593"
+      Last-Modified:
+      - Thu, 24 Aug 2017 07:11:35 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Runtime-Rack:
+      - '0.039681'
+      X-Github-Request-Id:
+      - DFDD:0DF3:1097AF4:2206DD0:599EE44A
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"swdonovan","id":25035051,"avatar_url":"https://avatars3.githubusercontent.com/u/25035051?v=4","gravatar_id":"","url":"https://api.github.com/users/swdonovan","html_url":"https://github.com/swdonovan","followers_url":"https://api.github.com/users/swdonovan/followers","following_url":"https://api.github.com/users/swdonovan/following{/other_user}","gists_url":"https://api.github.com/users/swdonovan/gists{/gist_id}","starred_url":"https://api.github.com/users/swdonovan/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/swdonovan/subscriptions","organizations_url":"https://api.github.com/users/swdonovan/orgs","repos_url":"https://api.github.com/users/swdonovan/repos","events_url":"https://api.github.com/users/swdonovan/events{/privacy}","received_events_url":"https://api.github.com/users/swdonovan/received_events","type":"User","site_admin":false,"name":"Wil
+        Donovan","company":null,"blog":"","location":null,"email":"wil.donovan@gmail.com","hireable":true,"bio":"Backend
+        Programmer with an Entrepreneurial passion","public_repos":28,"public_gists":1,"followers":3,"following":10,"created_at":"2017-01-10T15:06:51Z","updated_at":"2017-08-24T07:11:35Z"}'
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 14:35:54 GMT
+recorded_with: VCR 3.0.3

@@ -12,6 +12,17 @@ class RepoData
     commits      = parse_response(commits_data)
   end
 
+  def issues
+    issues_data = get_request("https://api.github.com/repos/#{@owner_name}/#{@repo_name}/issues#{@auth}")
+    issues      = parse_response(issues_data)
+  end
+
+  def pull_requests
+    issues.find_all do |issue|
+      issue['pull_request'] != nil
+    end
+  end
+
   private
 
   def get_request(url)

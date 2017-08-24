@@ -15,4 +15,11 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
- 
+
+ body, html{
+      height: 100%;
+  	background-repeat: no-repeat;
+  	background:url(http://programmingoflife.com/wp-content/uploads/2015/07/tell-background.jpg);
+  	font-family: 'Oxygen', sans-serif;
+ 	    background-size: cover;
+ }
