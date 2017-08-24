@@ -1,6 +1,8 @@
 require 'net/http'
 
 class GitHubData < ApplicationController
+  attr_reader :auth,
+              :username
 
   def initialize(username)
     @username     = username

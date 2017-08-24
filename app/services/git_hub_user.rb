@@ -52,4 +52,8 @@ class GitHubUser
       array
     end
   end
+
+  def organizations
+    data.organizations
+  end
 end

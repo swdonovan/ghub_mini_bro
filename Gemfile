@@ -37,12 +37,13 @@ gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'factory_girl_rails'
-    gem 'rack_session_access'
-    gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-    gem 'pry', :require => "pry"
-    gem 'simplecov'
-    gem 'rspec-rails'
-    gem 'capybara'
+  gem 'rack_session_access'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry', :require => "pry"
+  gem 'simplecov'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'simplecov'
 end
 
 group :test do
@@ -50,6 +51,8 @@ group :test do
   gem 'faker'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do
