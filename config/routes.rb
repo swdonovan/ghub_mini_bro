@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#new'
   delete 'logout', to: 'sessions#destroy'
 
-  resources :user, only: [:show] do
-    resources :dashboards, only: [:index]
-  end
+
+  resources :dashboard, only: [:index]
+  resources :profile, only: [:index]
+
 
   get '/auth/github', as: :github_login
   get '/auth/github/callback', to: 'sessions#create'
