@@ -131,24 +131,26 @@
 
     </div>
   </div>
-</div>
+
 
 <div class="mq-panel-wrapper">
   <div class="mq-panel-header">
-      <h3>Organizations</h3>
+      <h3>Recent Commits</h3>
   </div>
 
   <div class="mq-panel-body">
-    <% unless @organizations.nil? %>
-      <% @organizations.each do |org| %>
+    <% @commits.each do |commit| %>
        <ul class="mq-comment">
-        <div class="mq-comment-body clearfix">
-          <div class="header">
-            <strong class="primary-font"><%= org['name'] %></strong> <small class="pull-right text-muted">
+          <div class="mq-comment-body clearfix">
+              <div class="header">
+                  <p><strong class="primary-font">Date Created: <%= commit.created_at %></strong></p>
+                  <p><strong class="primary-font">Message: <%= commit.message %></strong></p>
+                  <small class="pull-right text-muted">
+                    <span class="glyphicon glyphicon-time"></span>
+                   </small>
+              </div>
           </div>
-         </div>
-       </ul>
-      <% end %>
+        </ul>
     <% end %>
   </div>
 </div>
@@ -199,22 +201,20 @@
 
 <div class="mq-panel-wrapper">
   <div class="mq-panel-header">
-      <h3>Recent Commits</h3>
+      <h3>Organizations</h3>
   </div>
 
   <div class="mq-panel-body">
-    <% @commits.each do |commit| %>
+    <% unless @organizations.nil? %>
+      <% @organizations.each do |org| %>
        <ul class="mq-comment">
-          <div class="mq-comment-body clearfix">
-              <div class="header">
-                  <p><strong class="primary-font">Date Created: <%= commit.created_at %></strong></p>
-                  <p><strong class="primary-font">Message: <%= commit.message %></strong></p>
-                  <small class="pull-right text-muted">
-                    <span class="glyphicon glyphicon-time"></span>
-                   </small>
-              </div>
+        <div class="mq-comment-body clearfix">
+          <div class="header">
+            <strong class="primary-font"><%= org['name'] %></strong> <small class="pull-right text-muted">
           </div>
-        </ul>
+         </div>
+       </ul>
+      <% end %>
     <% end %>
   </div>
 </div>
